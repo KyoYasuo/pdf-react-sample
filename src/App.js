@@ -20,7 +20,7 @@ function App() {
         </a>
       </header>
       <body>
-        <PDFViewer filePath={""}></PDFViewer>
+        <PDFViewer filePath={"./pdf/pdf-lib_modification_example.pdf"}></PDFViewer>
       </body>
     </div>
   );
