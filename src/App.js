@@ -7,10 +7,8 @@ function App() {
   
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
       <body>
-        <button onClick={() => {setfilePath("./pdf/pdf-lib_modification_example.pdf")}}>button</button>
+        <button onClick={() => {setfilePath("./pdf/node-handbook.pdf")}}>button</button>
         <PDFViewer filePath={filePath}></PDFViewer>
       </body>
     </div>
