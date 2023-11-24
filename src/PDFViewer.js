@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import React, { useEffect, useState } from 'react';
+import { PDFDocument } from 'pdf-lib';
 
 
 const PDFViewer = ({ filePath }) => {
@@ -8,6 +8,7 @@ const PDFViewer = ({ filePath }) => {
   useEffect(() => {
     const loadAndDisplayPDF = async () => {
       try {
+        console.log(filePath);
         const response = await fetch(filePath);
         const pdfBytes = await response.arrayBuffer();
         const pdfDoc = await PDFDocument.load(pdfBytes, { ignoreEncryption: true });
