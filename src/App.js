@@ -1,13 +1,17 @@
+import { useState } from 'react';
 import './App.css';
 import PDFViewer from './PDFViewer';
 
 function App() {
+  const [filePath, setfilePath] = useState("");
+  
   return (
     <div className="App">
       <header className="App-header">
       </header>
       <body>
-        <PDFViewer filePath={"./pdf/pdf-lib_modification_example.pdf"}></PDFViewer>
+        <button onClick={() => {setfilePath("./pdf/pdf-lib_modification_example.pdf")}}>button</button>
+        <PDFViewer filePath={filePath}></PDFViewer>
       </body>
     </div>
   );
